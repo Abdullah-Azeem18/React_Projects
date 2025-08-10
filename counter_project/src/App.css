@@ -1,0 +1,64 @@
+body {
+  background: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+.bulb-shape {
+  display: inline-block;
+  position: relative;
+}
+
+.glass {
+  width: 120px;
+  height: 160px;
+  background: radial-gradient(circle at 50% 40%, yellow 0%, gold 40%, transparent 70%);
+  border-radius: 60px 60px 50px 50px;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 0px transparent;
+}
+
+.holder {
+  width: 60px;
+  height: 40px;
+  background: gray;
+  margin: -10px auto 0;
+  border-radius: 5px;
+}
+
+.bulb-shape.off .glass {
+  background: radial-gradient(circle at 50% 40%, #444 0%, #222 40%, transparent 70%);
+  box-shadow: none;
+}
+
+.bulb-shape.on .glass {
+  box-shadow: 
+    0 0 30px yellow,
+    0 0 60px yellow,
+    0 0 100px yellow,
+    0 0 150px yellow;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  background: yellow;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
